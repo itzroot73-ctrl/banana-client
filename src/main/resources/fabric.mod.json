@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "fusionclient",
+  "version": "1.0.0",
+  "name": "Fusion Client",
+  "description": "Professional Minecraft Fabric Client for 1.21.1",
+  "authors": [
+    "FusionClient"
+  ],
+  "contact": {
+    "homepage": "https://example.com",
+    "sources": "https://github.com/example/fusionclient"
+  },
+  "license": "MIT",
+  "icon": "assets/fusionclient/icon.png",
+  "entrypoints": {
+    "main": [
+      "com.fusionclient.FusionClientMod"
+    ],
+    "client": [
+      "com.fusionclient.client.FusionClientClient"
+    ]
+  },
+  "mixins": [
+    "mixins.fusionclient.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "fabric-api": "*",
+    "minecraft": "1.21.1",
+    "java": ">=21"
+  }
+}

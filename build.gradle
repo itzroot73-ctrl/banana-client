@@ -1,0 +1,43 @@
+plugins {
+    id 'fabric-loom' version '1.6.+'
+    id 'java'
+}
+
+version = "1.0.0"
+group = "com.fusionclient"
+
+repositories {
+    maven {
+        url = "https://maven.fabricmc.net/"
+    }
+    maven {
+        url = "https://maven.terraformersmc.com/releases/"
+    }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:1.21.1"
+    mappings "net.fabricmc:yarn:1.21.1+build.1:v2"
+    modImplementation "net.fabricmc:fabric-loader:0.16.5"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:0.102.0+1.21.1"
+    implementation 'com.google.code.gson:gson:2.10.1'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+loom {
+    runs {
+        client {
+            property 'fabric.loader.mixins.config', 'mixins.fusionclient.json'
+        }
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+    options.release = 21
+}

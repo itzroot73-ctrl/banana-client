@@ -1,0 +1,23 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.fusionclient.mixin",
+  "compatibilityLevel": "java_21",
+  "client": [
+    "MixinClientPlayConnectionHandler",
+    "MixinClientPlayerEntity",
+    "MixinPlayerMoveC2SPacket",
+    "MixinWorldRenderer",
+    "MixinInGameHud",
+    "MixinTitleScreen",
+    "MixinSplashOverlay",
+    "MixinChatHandler",
+    "MixinMouseInput",
+    "MixinRotationHandler",
+    "MixinTotemHUD",
+    "MixinHudManager"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
